@@ -11,7 +11,7 @@ fi
 set -o vi
 
 alias sss='/System/Library/CoreServices/ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine'
-alias ls='LSCOLORS=gxfxcxdxbxexexabagacad /bin/ls -bFHGLOPW'
+alias ls='LSCOLORS=gxfxcxdxbxexexabagacad /bin/ls -abFHGLOPW'
 alias nuke='rm -rf'
 alias dc='docker-compose'
 
