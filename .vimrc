@@ -10,3 +10,5 @@ filetype plugin indent on
 
 set number
 set cursorline
+set tabstop=4
+
