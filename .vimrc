@@ -8,7 +8,10 @@ endif
 syntax on
 filetype plugin indent on
 
+set wildmenu
+set showcmd
 set number
 set cursorline
 set tabstop=4
+set showmatch
 
