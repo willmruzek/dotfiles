@@ -23,3 +23,5 @@ export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PR
 export PATH="$HOME/.cargo/bin:$PATH"
 
 export EDITOR=vim
+
+neofetch
