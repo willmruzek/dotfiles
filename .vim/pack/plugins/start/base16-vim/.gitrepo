@@ -1,0 +1,11 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = git@github.com:chriskempson/base16-vim.git
+	branch = master
+	commit = 7e9af12d680d81cc1277c07ef5acee8c83828f3f
+	parent = 5e6c919f0ff51639ec280587716cf024a6f75338
+	cmdver = 0.3.1
