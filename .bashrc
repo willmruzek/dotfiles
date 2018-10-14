@@ -21,6 +21,7 @@ alias dc='docker-compose'
 export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).
 
 export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="/usr/local/bin:$PATH"
 
 export EDITOR=vim
 
