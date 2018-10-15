@@ -1,0 +1,11 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = git@github.com:carlitux/deoplete-ternjs.git
+	branch = master
+	commit = 4b6276019a1491cc5003a0b007ca1aaeab671f57
+	parent = 1138c66b9b68a27cf105a753fd1fa4a59712f4d8
+	cmdver = 0.3.1
