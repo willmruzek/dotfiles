@@ -1,5 +1,5 @@
 source ~/.git-completion.bash
-source ./git-subrepo/.rc
+source ~/dotfiles/git-subrepo/.rc
 
 # Theme
 
