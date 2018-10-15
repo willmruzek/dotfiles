@@ -1,8 +1,12 @@
 source ~/.git-completion.bash
 source ./git-subrepo/.rc
 
+# Theme
+
 BASE16_SHELL=$HOME/base16-shell
 [ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
+
+# Prompt
 
 function _update_ps1() {
     PS1="$(powerline-shell $?)"
@@ -12,7 +16,7 @@ if [ "$TERM" != "linux" ]; then
     PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
 fi
 
-set -o vi
+# Aliases
 
 alias sss='/System/Library/CoreServices/ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine'
 alias ls='LSCOLORS=gxfxcxdxbxexexabagacad /bin/ls -abFHGLOPW'
