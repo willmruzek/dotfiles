@@ -1,0 +1,20 @@
+[user]
+	name = Will Mruzek
+	email = {{ .email }}
+	signingkey = AE2424079767F036968FDEA657CD0EBCB506088A
+[commit]
+	gpgsign = true
+[pull]
+	rebase = false
+[push]
+	autoSetupRemote = true
+[gpg]
+	program = /opt/homebrew/bin/gpg
+[merge]
+	tool = vscode
+[mergetool "vscode"]
+	cmd = code --wait $MERGED
+[diff]
+	tool = vscode
+[difftool "vscode"]
+	cmd = code --wait --diff $LOCAL $REMOTE

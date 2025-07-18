@@ -1,0 +1,6 @@
+{{- $email := promptStringOnce . "email" "Enter your email for Git commits" "some@email.com" -}}
+
+sourceDir = "{{ .chezmoi.sourceDir }}"
+
+[data]
+    email = {{ $email | quote }}
