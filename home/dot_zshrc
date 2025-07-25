@@ -4,13 +4,25 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
+# Using starship.rs prompt via plugin
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+# ZSH_THEME="robbyrussell"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
-plugins=(git)
+plugins=(
+    git
+    vi-mode
+    starship
+    zsh-autosuggestions
+    you-should-use
+    chezmoi
+    gh
+    npm
+    fzf
+    zsh-syntax-highlighting
+)
 
 # Ensure Homebrew completions are included.
 # See: https://docs.brew.sh/Shell-Completion
@@ -18,21 +30,18 @@ FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 
 source $ZSH/oh-my-zsh.sh
 
-# Use starship.rs prompt
-eval "$(starship init zsh)"
-
-source <(pkgx --shellcode)  #docs.pkgx.sh/shellcode
-
 autoload -U add-zsh-hook
 
 autoload -U +X bashcompinit && bashcompinit
-
-complete -o nospace -C /Users/mruzekw/.pkgx/terraform.io/v1.6.5/bin/terraform terraform
-complete -o nospace -C /opt/homebrew/bin/terraform terraform
 
 export HOMEBREW_BUNDLE_FILE=~/.Brewfile
 
 # Disable Oh My Zsh auto-updates since chezmoi manages it
 export DISABLE_AUTO_UPDATE=true
+
+export VI_MODE_SET_CURSOR=true
+
+# zsh-you-should-use
+export YSU_MESSAGE_POSITION="after"
 
 alias cz="chezmoi"

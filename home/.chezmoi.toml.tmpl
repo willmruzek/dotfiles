@@ -1,6 +1,10 @@
 {{- $email := promptStringOnce . "email" "Enter your email for Git commits" "some@email.com" -}}
 
-sourceDir = "{{ .chezmoi.sourceDir }}"
+{{- $machineTypeChoices := list "personal" "work" -}}
+{{- $machineType := promptChoiceOnce . "machineType" "Are you setting up a personal or work machine?" $machineTypeChoices -}}
+
+sourceDir = {{ .chezmoi.sourceDir | quote }}
 
 [data]
     email = {{ $email | quote }}
+    machineType = {{ $machineType | quote }}
