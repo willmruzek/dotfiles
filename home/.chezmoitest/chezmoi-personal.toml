@@ -1,0 +1,5 @@
+sourceDir = "/Users/mruzekw/Code/dotfiles"
+
+[data]
+email = "personal@email.com"
+machineType = "personal"
