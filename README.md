@@ -22,6 +22,10 @@ chezmoi init --apply willmruzek
 - **Homebrew packages** (`.Brewfile`)
 - **chezmoi configuration**
 
+## Platform Support
+
+**⚠️ macOS/Darwin Only**: These dotfiles are currently designed and tested for macOS systems only. The setup scripts assume Homebrew, macOS-specific paths, and Darwin-specific tools.
+
 ## Automatic Setup
 
 The installation process will automatically:
