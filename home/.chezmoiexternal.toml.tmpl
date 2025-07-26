@@ -1,0 +1,40 @@
+{{- $githubBranchTarURLTmpl := "https://github.com/%s/archive/refs/heads/%s.tar.gz" -}}
+{{- $githubTagTarURLTmpl := "https://github.com/%s/archive/refs/tags/%s.tar.gz" -}}
+{{- $githubCommitTarURLTmpl := "https://github.com/%s/archive/%s.tar.gz" -}}
+
+[".oh-my-zsh"]
+type = "archive"
+url = {{ printf $githubCommitTarURLTmpl "ohmyzsh/ohmyzsh" "70f0e5285f802ce6eb7feea4588ff8917246233e" | quote }}
+exact = true
+stripComponents = 1
+refreshPeriod = "168h"                                           # refresh weekly
+exclude = ["*/.*", "*/custom/**"]
+
+[".oh-my-zsh/custom/plugins/zsh-autosuggestions"]
+type = "archive"
+url = {{ printf $githubTagTarURLTmpl "zsh-users/zsh-autosuggestions" "v0.7.1" | quote }}
+exact = true
+stripComponents = 1
+refreshPeriod = "168h"
+exclude = ["*/.editorconfig", "*/.gitattributes", "*/.github", "*/.gitignore"]
+
+[".oh-my-zsh/custom/plugins/zsh-syntax-highlighting"]
+type = "archive"
+url = {{ printf $githubTagTarURLTmpl "zsh-users/zsh-syntax-highlighting" "0.8.0" | quote }}
+exact = true
+stripComponents = 1
+refreshPeriod = "168h"
+
+[".oh-my-zsh/custom/plugins/you-should-use"]
+type = "archive"
+url = {{ printf $githubTagTarURLTmpl "MichaelAquilina/zsh-you-should-use" "1.10.0" | quote }}
+exact = true
+stripComponents = 1
+refreshPeriod = "168h"
+
+[".oh-my-zsh/custom/plugins/fzf-tab"]
+type = "archive"
+url = {{ printf $githubCommitTarURLTmpl "Aloxaf/fzf-tab" "fc6f0dcb2d5e41a4a685bfe9af2f2393dc39f689" | quote }}
+exact = true
+stripComponents = 1
+refreshPeriod = "168h"

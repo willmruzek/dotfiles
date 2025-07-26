@@ -21,6 +21,7 @@ plugins=(
     gh
     npm
     fzf
+    fzf-tab
     zsh-syntax-highlighting
 )
 
