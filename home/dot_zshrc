@@ -29,20 +29,26 @@ plugins=(
 # See: https://docs.brew.sh/Shell-Completion
 FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 
+# Load Oh My Zsh
 source $ZSH/oh-my-zsh.sh
 
-autoload -U add-zsh-hook
-
+# Enable bash completion in zsh
 autoload -U +X bashcompinit && bashcompinit
 
+# Set Homebrew bundle file location
 export HOMEBREW_BUNDLE_FILE=~/.Brewfile
 
 # Disable Oh My Zsh auto-updates since chezmoi manages it
 export DISABLE_AUTO_UPDATE=true
 
+# Change cursor based on vi mode
 export VI_MODE_SET_CURSOR=true
 
-# zsh-you-should-use
+# Set position of zsh-you-should-use hints
 export YSU_MESSAGE_POSITION="after"
+
+###########
+# Aliases #
+###########
 
 alias cz="chezmoi"
