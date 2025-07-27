@@ -5,7 +5,7 @@ brew "starship"
 brew "fzf"
 {{- if eq .machineType "personal" }}
 brew "mas"
-{{ end -}}
+{{- end }}
 
 cask "font-fira-code-nerd-font"
 {{- if eq .machineType "personal" }}
@@ -74,4 +74,4 @@ vscode "wayou.vscode-todo-highlight"
 vscode "wilsonsio.color-vision"
 vscode "wix.vscode-import-cost"
 vscode "yoavbls.pretty-ts-errors"
-{{ end -}}
+{{ end }}
