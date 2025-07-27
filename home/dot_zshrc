@@ -47,6 +47,9 @@ export VI_MODE_SET_CURSOR=true
 # Set position of zsh-you-should-use hints
 export YSU_MESSAGE_POSITION="after"
 
+# Show hidden files in file completions
+setopt globdots
+
 ###########
 # Aliases #
 ###########
