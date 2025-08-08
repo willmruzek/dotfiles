@@ -31,3 +31,8 @@ fi
 
 # Add personal bin to PATH
 export PATH="$HOME/.local/bin:$PATH"
+
+{{ if eq .machineType "work" -}}
+# Set Java home
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/amazon-corretto-8.jdk/Contents/Home
+{{ end }}
