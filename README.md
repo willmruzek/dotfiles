@@ -79,45 +79,16 @@ eval $(op signin)
 ### 🎯 High Priority - Core Development Tools
 
 1. **SSH Configuration**
-   - `chezmoi add ~/.ssh/config`
-   - Consider using chezmoi templates for different environments
-
-2. **VS Code Settings**
-   - `chezmoi add ~/.vscode/settings.json`
-   - `chezmoi add ~/.vscode/keybindings.json`
-   - Maybe create a script to install extensions
-
-3. **GPG Configuration**
-   - `chezmoi add ~/.gnupg/gpg.conf`
-   - `chezmoi add ~/.gnupg/gpg-agent.conf`
-   - Note: Don't add private keys, only configuration files
+2. **GPG Configuration**
 
 ### 🛠️ Medium Priority - Development Workflow
 
-4. **Docker & Container Tools**
-   - `chezmoi add ~/.docker/config.json`
-
-5. **Terminal & Shell Enhancements**
-   - `chezmoi add ~/.config/iterm2/`
-
-6. **Group Related Configs**
-   - `chezmoi add ~/.config/starship.toml`      # Starship prompt config
+3. **Group Related Configs**
    - `chezmoi add ~/.config/git/`               # Global git hooks and config
    - `chezmoi add ~/.config/zsh/completions/`   # Custom shell completions
    - Organize configs under `dot_config/` for better structure
 
-7. **Vim Configuration**
-   - `chezmoi add ~/.vimrc`                     # Basic vim config as backup editor
-   - `chezmoi add ~/.config/nvim/`              # Neovim config (if used)
-
-### ⚠️ Files to AVOID Adding
-
-- `.zsh_history` - Contains command history (privacy)
-- `.aws/credentials` - Contains AWS keys (security)
-- `.ssh/id_*` - SSH private keys (security)
-- `.gnupg/` - GPG private keys (security)
-- Cache directories (`.cache`, `.npm`, etc.)
-- `.DS_Store` - macOS metadata files
+4. **Vim Configuration**
 
 ## Alternative Dotfile Managers
 
