@@ -4,11 +4,13 @@ brew "starship"
 brew "fzf"
 brew "asdf"
 brew "gh"
+brew "tree"
 {{- if eq .machineType "personal" }}
 brew "mas"
 {{- end }}
 
 cask "font-fira-code-nerd-font"
+cask "raycast"
 {{- if eq .machineType "personal" }}
 cask "chatgpt"
 cask "1password-cli"

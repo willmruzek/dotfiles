@@ -1,0 +1,41 @@
+[
+  {
+    "key": "ctrl+alt+right",
+    "command": "-cursorWordEndRight",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+alt+right",
+    "command": "-cursorWordPartRight",
+    "when": "textInputFocus"
+  },
+
+  // Enter next line in terminal without executing
+  {
+    "key": "ctrl+enter",
+    "command": "workbench.action.terminal.sendSequence",
+    "args": {
+      "text": "\\\r\n"
+    },
+    "when": "terminalFocus"
+  },
+  {
+    "key": "shift+enter",
+    "command": "workbench.action.terminal.sendSequence",
+    "args": {
+      "text": "\\\r\n"
+    },
+    "when": "terminalFocus"
+  },
+
+  // Quick switch windows
+  {
+    "key": "alt+p",
+    "command": "workbench.action.quickSwitchWindow"
+  },
+  {
+    "key": "alt+p",
+    "command": "workbench.action.quickOpenNavigateNext",
+    "when": "inWindowsPicker"
+  }
+]

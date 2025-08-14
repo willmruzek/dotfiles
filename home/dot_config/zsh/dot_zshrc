@@ -49,10 +49,6 @@ export VI_MODE_SET_CURSOR=true
 # Set position of zsh-you-should-use hints
 export YSU_MESSAGE_POSITION="after"
 
-# Configure ASDF
-export ASDF_CONFIG_FILE="$XDG_CONFIG_HOME/asdf/.asdfrc"
-export ASDF_DATA_DIR="$XDG_DATA_HOME/asdf"
-
 # Show hidden files in file completions
 setopt globdots
 

@@ -3,3 +3,10 @@
 
 [aws]
 disabled = true
+
+# TODO
+# [custom.gitworktree]
+# when = 'git rev-parse --git-dir 2>/dev/null | grep -q "/worktrees/"'
+# command = 'basename "$(dirname "$(git rev-parse --git-common-dir 2>/dev/null)")"'
+# style = "bold yellow"
+# format = " [$output]($style) "

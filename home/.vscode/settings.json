@@ -1,0 +1,106 @@
+{
+  "editor.renderLineHighlight": "all",
+  "prettier.singleQuote": true,
+  "eslint.lintTask.enable": true,
+  "workbench.startupEditor": "newUntitledFile",
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.formatOnPaste": true,
+  "files.insertFinalNewline": true,
+  "editor.fontFamily": "Fira Code",
+  "editor.fontSize": 14,
+  "editor.matchBrackets": "always",
+  "files.trimTrailingWhitespace": true,
+  "editor.snippetSuggestions": "top",
+  "editor.formatOnSave": true,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.suggestSelection": "first",
+  "workbench.colorTheme": "One Dark Pro Night Flat",
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true
+  },
+  "redhat.telemetry.enabled": true,
+  "markdown-preview-github-styles.colorTheme": "light",
+  "editor.accessibilitySupport": "off",
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "totalTypeScript.hiddenTips": [
+    "union-type",
+    "ts-object-type",
+    "literal-type",
+    "type-alias-declaration",
+    "basic-types",
+    "variable-type-annotation",
+    "null-keyword",
+    "typing-function-parameters",
+    "function-return-type",
+    "never-keyword",
+    "optional-object-property",
+    "any-type",
+    "as-const",
+    "interface-declaration",
+    "passing-generics-to-types",
+    "as-const-on-object",
+    "keyof",
+    "typeof",
+    "undefined-keyword",
+    "non-null-expression",
+    "partial-utility-type",
+    "omit-utility-type",
+    "array-type"
+  ],
+  "eslint.rules.customizations": [],
+  "cSpell.userWords": [
+    "BASEPATH",
+    "contentlayer",
+    "Liason",
+    "Mruzek",
+    "Squarespace"
+  ],
+  "totalTypeScript.hideAllTips": true,
+  "totalTypeScript.hideBasicTips": true,
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "tailwindCSS.experimental.classRegex": [
+    ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
+    ["cx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
+  ],
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.fontLigatures": false,
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "github.copilot.chat.codesearch.enabled": true,
+  "security.promptForLocalFileProtocolHandling": false,
+  "cSpell.languageSettings": [],
+  "cSpell.enabledFileTypes": {
+    "*": false
+  },
+  "workspace-terminals.switchTerminal": "fromWorkspaceTerminals",
+  "files.simpleDialog.enable": true,
+  "terminal.integrated.stickyScroll.enabled": true,
+  "scm.defaultViewMode": "tree",
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "workbench.editor.showTabs": "none",
+  "window.title": "${rootPath}${separator}${activeRepositoryBranchName}${separator}${profileName}",
+  "typescript.preferences.organizeImports": {},
+  "typescript.preferences.preferTypeOnlyAutoImports": true,
+  "window.openFoldersInNewWindow": "on",
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.activityBar.location": "top"
+}
