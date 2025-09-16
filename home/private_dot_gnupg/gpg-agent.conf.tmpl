@@ -3,4 +3,4 @@ default-cache-ttl 28800
 max-cache-ttl 28800
 
 # Use pinentry for macOS
-pinentry-program {{ output "brew" "--prefix" }}/bin/pinentry-mac
+pinentry-program {{ output "brew" "--prefix" | trim }}/bin/pinentry-mac
