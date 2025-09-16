@@ -1,2 +1,4 @@
 command -v brew >/dev/null || export PATH="/opt/homebrew/bin:$HOME/Code/homebrew/bin:$PATH"
 command -v brew >/dev/null && eval "$(brew shellenv)"
+
+export GPG_TTY=$(tty)
