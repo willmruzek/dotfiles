@@ -1,0 +1,21 @@
+{
+  "name": "dotfiles",
+  "version": "1.0.0",
+  "description": "Personal dotfiles managed with chezmoi and zx",
+  "type": "module",
+  "scripts": {
+    "export-vscode": "zx home/.scripts/export-vscode-settings.ts",
+    "import-vscode": "zx home/.scripts/import-vscode-settings.ts"
+  },
+  "dependencies": {
+    "neverthrow": "^8.1.1",
+    "zx": "^8.2.4"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.1",
+    "typescript": "^5.7.2"
+  },
+  "engines": {
+    "node": ">=24.0.0"
+  }
+}

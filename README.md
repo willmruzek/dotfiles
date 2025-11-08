@@ -14,6 +14,8 @@ sh -c "$(curl -fsLS https://raw.githubusercontent.com/willmruzek/dotfiles/master
 chezmoi init --apply willmruzek
 ```
 
+**Note:** The installation scripts use [google/zx](https://github.com/google/zx) for better shell scripting. Node.js will be installed automatically if not present.
+
 ## What's Included
 
 - **Git configuration** (`.gitconfig`)
@@ -74,13 +76,13 @@ Minimal helpers to move VS Code user settings between your Mac and this repo. Re
 - Export local → repo:
 
   ```bash
-  ./home/.scripts/export-vscode-settings.sh
+  ./home/.scripts/export-vscode-settings.mjs
   ```
 
 - Import repo → local (preview first by default):
 
   ```bash
-  ./home/.scripts/import-vscode-settings.sh
+  ./home/.scripts/import-vscode-settings.mjs
   # flags: -n/--dry-run (preview only), -y/--yes (auto-approve)
   ```
 
