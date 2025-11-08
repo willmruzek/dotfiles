@@ -17,19 +17,11 @@ if ! command -v brew &> /dev/null; then
             echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
             eval "$(/opt/homebrew/bin/brew shellenv)"
         fi
+        echo "✅ Homebrew installed"
     else
         echo "⏭️  Skipping Homebrew installation"
         exit 0
     fi
 else
     echo "✅ Homebrew is already installed"
-fi
-
-# Install Node.js LTS if not present
-if ! command -v node &> /dev/null; then
-    echo "📦 Installing Node.js LTS..."
-    brew install node
-    echo "✅ Node.js installed"
-else
-    echo "✅ Node.js is already installed"
 fi
