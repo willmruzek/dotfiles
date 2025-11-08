@@ -2,25 +2,6 @@
 
 set -e # -e: exit on error
 
-# Ensure Node.js/npm is available for zx scripts that chezmoi will run
-if ! command -v npx >/dev/null 2>&1; then
-  echo "📦 Node.js not found. Installing via Homebrew..."
-  
-  # Install Homebrew first if not present
-  if ! command -v brew >/dev/null 2>&1; then
-    echo "📦 Installing Homebrew..."
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-    
-    # Add Homebrew to PATH for Apple Silicon Macs
-    if [ "$(uname -m)" = "arm64" ]; then
-      eval "$(/opt/homebrew/bin/brew shellenv)"
-    fi
-  fi
-  
-  # Install Node.js LTS
-  brew install node
-fi
-
 # Install chezmoi if not present
 if [ ! "$(command -v chezmoi)" ]; then
   bin_dir="$HOME/.local/bin"
