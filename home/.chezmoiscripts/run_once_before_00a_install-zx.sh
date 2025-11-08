@@ -2,21 +2,20 @@
 
 set -e
 
-# Install zx before other scripts run
+# Install zx before other scripts run via npm
 # This ensures all .mjs scripts can execute with zx
 
 if command -v npx &> /dev/null; then
     # npx is available, zx will be available via npx zx
     echo "✅ npx is available (zx will be available via npx)"
-elif command -v brew &> /dev/null; then
-    # Install zx via Homebrew
-    if ! command -v zx &> /dev/null; then
-        echo "📦 Installing zx via Homebrew..."
-        brew install zx
-    else
-        echo "✅ zx is already installed"
-    fi
 else
-    echo "⚠️  Neither npx nor brew available. zx scripts may not work."
-    echo "    Please install Node.js (for npx) or Homebrew first."
+    echo "⚠️  npx not available. Installing zx globally via npm..."
+    if command -v npm &> /dev/null; then
+        npm install -g zx
+        echo "✅ zx installed via npm"
+    else
+        echo "❌ npm not found. Node.js must be installed first."
+        echo "    Please install Node.js before running this script."
+        exit 1
+    fi
 fi

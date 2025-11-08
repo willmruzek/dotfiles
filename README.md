@@ -14,7 +14,7 @@ sh -c "$(curl -fsLS https://raw.githubusercontent.com/willmruzek/dotfiles/master
 chezmoi init --apply willmruzek
 ```
 
-**Note:** The installation scripts use [Google/zx](https://github.com/google/zx) for better shell scripting. Node.js will be installed automatically if not present.
+**Note:** The installation scripts use [google/zx](https://github.com/google/zx) for better shell scripting. Node.js will be installed automatically if not present.
 
 ## What's Included
 
