@@ -1,3 +1,3 @@
 #!/usr/bin/env zx
 
-await $`echo "✨ Setup complete!"`
+console.log("✨ Setup complete!")
