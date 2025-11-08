@@ -1,9 +1,9 @@
 #!/usr/bin/env zx
 
-// import-vscode-settings.mjs - Import VS Code settings from repo into the local VS Code User directory
+// import-vscode-settings.ts - Import VS Code settings from repo into the local VS Code User directory
 //
 // Usage:
-//   ./import-vscode-settings.mjs [--dry-run|-n] [--yes|-y]
+//   ./import-vscode-settings.ts [--dry-run|-n] [--yes|-y]
 //
 // Options:
 //   -n, --dry-run  Preview diffs only; no backup or changes
@@ -19,7 +19,7 @@
 try {
   await $`command -v git`
 } catch (error) {
-  console.error("Error: git not found. Install git.")
+  $.echo("Error: git not found. Install git.")
   process.exit(1)
 }
 
@@ -27,7 +27,7 @@ try {
 try {
   await $`command -v rsync`
 } catch (error) {
-  console.error("Error: rsync not found. Install rsync.")
+  $.echo("Error: rsync not found. Install rsync.")
   process.exit(1)
 }
 
@@ -58,7 +58,7 @@ const repoRoot = (await $`git -C ${scriptDir} rev-parse --show-toplevel`).stdout
 
 // Ensure repo root is determined
 if (!repoRoot) {
-  console.error("Error: Could not determine source path")
+  $.echo("Error: Could not determine source path")
   process.exit(1)
 }
 
@@ -69,7 +69,7 @@ const dest = `${process.env.HOME}/Library/Application Support/Code/User`
 try {
   await fs.access(src)
 } catch (error) {
-  console.error(`Error: Source repo VS Code directory not found: ${src}.`)
+  $.echo(`Error: Source repo VS Code directory not found: ${src}.`)
   process.exit(1)
 }
 
@@ -77,13 +77,13 @@ try {
 try {
   await fs.access(dest)
 } catch (error) {
-  console.error(`Error: Destination VS Code User directory not found: ${dest}.`)
+  $.echo(`Error: Destination VS Code User directory not found: ${dest}.`)
   process.exit(1)
 }
 
 // If dry-run, note it early
 if (dryRun) {
-  console.error("Dry run: will preview changes only. No backup or import will be performed.")
+  $.echo("Dry run: will preview changes only. No backup or import will be performed.")
 }
 
 // Backup existing settings into $dest/.dotfiles_backup/<timestamp>
@@ -94,15 +94,15 @@ if (!dryRun) {
   await fs.mkdir(backupDir, { recursive: true })
   
   await $`rsync -a ${includeArgs} --exclude='/.dotfiles_backup/***' --exclude='*' ${dest}/ ${backupDir}/`
-  console.error(`Backup created at: ${backupDir}`)
+  $.echo(`Backup created at: ${backupDir}`)
 }
 
 // Preview planned changes using git-style color diff and require approval
 let changes = 0
 const jsonFiles = ['mcp', 'keybindings', 'settings']
 
-console.error("Planned changes:")
-console.error("")
+$.echo("Planned changes:")
+$.echo("")
 
 for (const f of jsonFiles) {
   const srcFile = `${src}/${f}.json`
@@ -160,13 +160,13 @@ try {
 }
 
 if (changes === 0) {
-  console.error("No changes to import. Exiting.")
+  $.echo("No changes to import. Exiting.")
   process.exit(0)
 }
 
 // If dry-run, stop here after preview
 if (dryRun) {
-  console.error("Dry run complete. Changes were not applied.")
+  $.echo("Dry run complete. Changes were not applied.")
   process.exit(0)
 }
 
@@ -174,7 +174,7 @@ if (dryRun) {
 if (!autoYes) {
   const answer = await question("Proceed with import? [y/N]: ")
   if (!answer.match(/^[yY]([eE][sS])?$/)) {
-    console.error("Aborted.")
+    $.echo("Aborted.")
     process.exit(1)
   }
 }
