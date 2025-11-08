@@ -2,20 +2,20 @@
 
 set -e
 
-# Install zx before other scripts run via npm
-# This ensures all .mjs scripts can execute with zx
+# Verify zx is available after npm install
+# zx is installed as a dependency in package.json
 
 if command -v npx &> /dev/null; then
-    # npx is available, zx will be available via npx zx
-    echo "✅ npx is available (zx will be available via npx)"
-else
-    echo "⚠️  npx not available. Installing zx globally via npm..."
-    if command -v npm &> /dev/null; then
-        npm install -g zx
-        echo "✅ zx installed via npm"
+    echo "✅ npx is available"
+    
+    # Check if zx is available via npx
+    if npx zx --version &> /dev/null; then
+        echo "✅ zx is available via npx"
     else
-        echo "❌ npm not found. Node.js must be installed first."
-        echo "    Please install Node.js before running this script."
-        exit 1
+        echo "⚠️  zx not yet available via npx (will be installed by npm install)"
     fi
+else
+    echo "❌ npx not found. Node.js must be installed first."
+    echo "    Please install Node.js before running this script."
+    exit 1
 fi

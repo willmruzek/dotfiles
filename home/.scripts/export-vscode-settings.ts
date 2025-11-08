@@ -38,7 +38,7 @@ const includes = [
 const includeArgs = includes.flatMap(p => ['--include', p])
 
 const scriptDir = __dirname
-const repoRoot = (await $`git -C ${scriptDir} rev-parse --show-toplevel`).stdout.trim()
+const repoRoot = (await $`git -C ${scriptDir} rev-parse --show-toplevel`).stdout
 
 if (!repoRoot) {
   echo`Error: Could not determine destination path`
