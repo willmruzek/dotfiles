@@ -2,7 +2,7 @@
 
 set -e # -e: exit on error
 
-# Ensure Node.js/npm is available for npx zx
+# Ensure Node.js/npm is available for zx scripts that chezmoi will run
 if ! command -v npx >/dev/null 2>&1; then
   echo "📦 Node.js not found. Installing via Homebrew..."
   
@@ -17,12 +17,28 @@ if ! command -v npx >/dev/null 2>&1; then
     fi
   fi
   
-  # Install Node.js
+  # Install Node.js LTS
   brew install node
+fi
+
+# Install chezmoi if not present
+if [ ! "$(command -v chezmoi)" ]; then
+  bin_dir="$HOME/.local/bin"
+  chezmoi="$bin_dir/chezmoi"
+  if [ "$(command -v curl)" ]; then
+    sh -c "$(curl -fsSL https://chezmoi.io/get)" -- -b "$bin_dir"
+  elif [ "$(command -v wget)" ]; then
+    sh -c "$(wget -qO- https://chezmoi.io/get)" -- -b "$bin_dir"
+  else
+    echo "To install chezmoi, you must have curl or wget installed." >&2
+    exit 1
+  fi
+else
+  chezmoi=chezmoi
 fi
 
 # POSIX way to get script's dir: https://stackoverflow.com/a/29834779/12156188
 script_dir="$(cd -P -- "$(dirname -- "$(command -v -- "$0")")" && pwd -P)"
 
-# Run the zx version of the install script using npx
-exec npx zx "$script_dir/install.mjs"
+# exec: replace current process with chezmoi init
+exec "$chezmoi" init --apply "--source=$script_dir"
