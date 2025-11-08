@@ -15,7 +15,7 @@
 try {
   await $`command -v git`
 } catch (error) {
-  $.echo("Error: git not found. Install git.")
+  echo`Error: git not found. Install git.`
   process.exit(1)
 }
 
@@ -23,7 +23,7 @@ try {
 try {
   await $`command -v rsync`
 } catch (error) {
-  $.echo("Error: rsync not found. Install rsync.")
+  echo`Error: rsync not found. Install rsync.`
   process.exit(1)
 }
 
@@ -41,7 +41,7 @@ const scriptDir = __dirname
 const repoRoot = (await $`git -C ${scriptDir} rev-parse --show-toplevel`).stdout.trim()
 
 if (!repoRoot) {
-  $.echo("Error: Could not determine destination path")
+  echo`Error: Could not determine destination path`
   process.exit(1)
 }
 
@@ -52,7 +52,7 @@ const src = `${process.env.HOME}/Library/Application Support/Code/User`
 try {
   await fs.access(src)
 } catch (error) {
-  $.echo(`Error: Source VS Code User directory not found: ${src}.`)
+  echo`Error: Source VS Code User directory not found: ${src}.`
   process.exit(1)
 }
 
@@ -60,4 +60,4 @@ await fs.mkdir(dest, { recursive: true })
 
 await $`rsync -a --delete ${includeArgs} --exclude='*' ${src}/ ${dest}/`
 
-$.echo("VS Code settings exported successfully.")
+echo`VS Code settings exported successfully.`

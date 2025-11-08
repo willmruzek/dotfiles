@@ -1,3 +1,3 @@
 #!/usr/bin/env zx
 
-$.echo("✨ Setup complete!")
+echo`✨ Setup complete!`
