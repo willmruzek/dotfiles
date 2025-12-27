@@ -1,5 +1,6 @@
 {{- $name := promptStringOnce . "name" "Enter your name for Git commits" "Some Name" -}}
 {{- $email := promptStringOnce . "email" "Enter your email for Git commits" "some@email.com" -}}
+{{- $globalGpGKey := promptStringOnce . "globalGpGKey" "Enter your global GPG key for Git commits" "xxx" -}}
 
 {{- $machineTypeChoices := list "personal" "work" -}}
 {{- $machineType := promptChoiceOnce . "machineType" "Are you setting up a personal or work machine?" $machineTypeChoices -}}
@@ -10,6 +11,7 @@ sourceDir = {{ .chezmoi.sourceDir | quote }}
     name = {{ $name | quote }}
     email = {{ $email | quote }}
     machineType = {{ $machineType | quote }}
+    globalGpGKey = {{ $globalGpGKey | quote }}
 
 [edit]
     command = "code"

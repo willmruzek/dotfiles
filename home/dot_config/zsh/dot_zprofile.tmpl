@@ -1,6 +1,8 @@
 command -v brew >/dev/null || export PATH="/opt/homebrew/bin:$HOME/Code/homebrew/bin:$PATH"
 command -v brew >/dev/null && eval "$(brew shellenv)"
 
+export GPG_TTY=$(tty)
+
 {{ if eq .machineType "work" }}
 
 # google-cloud-sdk - Update PATH and enable shell completion

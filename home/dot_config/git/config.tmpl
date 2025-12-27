@@ -1,12 +1,17 @@
 [user]
   name = {{ .name }}
   email = {{ .email }}
+  signingkey = {{ .globalGpGKey }}
+
 
 [init]
   defaultBranch = main
 
 [commit]
   gpgsign = true
+
+[tag]
+  gpgSign = true
 
 [pull]
   rebase = false
