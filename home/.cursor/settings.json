@@ -1,0 +1,131 @@
+{
+  /**************************
+   * Core
+   **************************/
+
+  "editor.renderLineHighlight": "all",
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.formatOnPaste": true,
+  "editor.fontFamily": "Fira Code",
+  "editor.fontSize": 14,
+  "editor.matchBrackets": "always",
+  "editor.snippetSuggestions": "top",
+  "editor.formatOnSave": true,
+  "editor.suggestSelection": "first",
+  "editor.accessibilitySupport": "off",
+  "editor.wordBasedSuggestions": "off",
+  "editor.inlineSuggest.syntaxHighlightingEnabled": true,
+  "editor.fontLigatures": false,
+
+  "workbench.colorTheme": "Catppuccin Macchiato",
+  "workbench.startupEditor": "newUntitledFile",
+  "workbench.iconTheme": "catppuccin-macchiato",
+  "workbench.editor.showTabs": "none",
+
+  "window.openFoldersInNewWindow": "on",
+  "window.title": "${rootPath}${separator}${activeRepositoryBranchName}${separator}${profileName}",
+
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true
+  },
+  "files.simpleDialog.enable": true,
+
+  "security.promptForLocalFileProtocolHandling": false,
+
+  "terminal.integrated.stickyScroll.enabled": true,
+
+  "scm.defaultViewMode": "tree",
+
+  "git.autofetch": true,
+  "git.confirmSync": false,
+
+  "typescript.preferences.organizeImports": {},
+  "typescript.preferences.preferTypeOnlyAutoImports": true,
+
+  /**************************
+   * Extensions
+   **************************/
+
+  "eslint.rules.customizations": [],
+  "eslint.lintTask.enable": true,
+
+  "prettier.singleQuote": true,
+  "prettier.requireConfig": true,
+
+  "tailwindCSS.experimental.classRegex": [
+    ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
+    ["cx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
+  ],
+
+  "totalTypeScript.hiddenTips": [
+    "union-type",
+    "ts-object-type",
+    "literal-type",
+    "type-alias-declaration",
+    "basic-types",
+    "variable-type-annotation",
+    "null-keyword",
+    "typing-function-parameters",
+    "function-return-type",
+    "never-keyword",
+    "optional-object-property",
+    "any-type",
+    "as-const",
+    "interface-declaration",
+    "passing-generics-to-types",
+    "as-const-on-object",
+    "keyof",
+    "typeof",
+    "undefined-keyword",
+    "non-null-expression",
+    "partial-utility-type",
+    "omit-utility-type",
+    "array-type"
+  ],
+  "totalTypeScript.hideAllTips": true,
+  "totalTypeScript.hideBasicTips": true,
+
+  /**************************
+   * Cursor Specific
+   **************************/
+
+  "cursor.composer.shouldChimeAfterChatFinishes": true,
+  "cursor.composer.usageSummaryDisplay": "always",
+  "cursor.terminal.usePreviewBox": true,
+
+  /**************************
+   * Language Specific
+   **************************/
+
+  "[javascript][javascriptreact][typescript][typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[dockercompose]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.autoIndent": "advanced",
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": false,
+      "strings": true
+    },
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "[github-actions-workflow]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "[mdx][markdown]": {
+    "editor.wordWrap": "on"
+  },
+  "[json][jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}

@@ -1,63 +1,125 @@
 {
+  /**************************
+   * Core
+   **************************/
+
   "editor.renderLineHighlight": "all",
-  "prettier.singleQuote": true,
-  "eslint.lintTask.enable": true,
-  "workbench.startupEditor": "newUntitledFile",
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.formatOnPaste": true,
-  "files.insertFinalNewline": true,
   "editor.fontFamily": "Fira Code",
   "editor.fontSize": 14,
   "editor.matchBrackets": "always",
-  "files.trimTrailingWhitespace": true,
   "editor.snippetSuggestions": "top",
   "editor.formatOnSave": true,
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
   "editor.suggestSelection": "first",
-  "workbench.colorTheme": "One Dark Pro Night Flat",
+  "editor.accessibilitySupport": "off",
+  "editor.wordBasedSuggestions": "off",
+  "editor.inlineSuggest.syntaxHighlightingEnabled": true,
+  "editor.aiStats.enabled": true,
+  "editor.minimap.enabled": false,
+  "editor.fontLigatures": false,
+
+  "workbench.colorTheme": "Catppuccin Mocha",
+  "workbench.startupEditor": "newUntitledFile",
+  "workbench.activityBar.location": "top",
+  "workbench.iconTheme": "catppuccin-mocha",
+  "workbench.editor.showTabs": "none",
+
+  "window.openFoldersInNewWindow": "on",
+  "window.title": "${rootPath}${separator}${activeRepositoryBranchName}${separator}${profileName}",
+
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
   "files.exclude": {
     "**/.classpath": true,
     "**/.project": true,
     "**/.settings": true,
     "**/.factorypath": true
   },
-  "redhat.telemetry.enabled": true,
-  "markdown-preview-github-styles.colorTheme": "light",
-  "editor.accessibilitySupport": "off",
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "files.simpleDialog.enable": true,
+
+  "extensions.ignoreRecommendations": true,
+
+  "security.promptForLocalFileProtocolHandling": false,
+
+  "terminal.integrated.stickyScroll.enabled": false,
+  "terminal.integrated.suggest.enabled": false,
+
+  "scm.defaultViewMode": "tree",
+
+  "git.autofetch": true,
+  "git.confirmSync": false,
+
+  "chat.detectParticipant.enabled": false,
+  "chat.checkpoints.showFileChanges": true,
+  "chat.tools.terminal.autoApprove": {
+    "git commit -em": true,
+    "npx tsc": true,
+    "npm run build": true,
+    "npm run lint": true,
+    "pnpm run build": true,
+    "grep": true,
+    "pnpm test": {
+      "approve": true,
+      "matchCommandLine": true
+    },
+    "pnpm tsc": {
+      "approve": true,
+      "matchCommandLine": true
+    },
+    "pnpm fmt": {
+      "approve": true,
+      "matchCommandLine": true
+    },
+    "jq": true,
+    "git ls-tree": true,
+    "/^pnpm build$/": {
+      "approve": true,
+      "matchCommandLine": true
+    },
+    "/^pnpm install$/": {
+      "approve": true,
+      "matchCommandLine": true
+    },
+    "/^pnpm run -s build$/": {
+      "approve": true,
+      "matchCommandLine": true
+    }
   },
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "chat.useNestedAgentsMdFiles": true,
+  "chat.useClaudeSkills": true,
+  "chat.instructionsFilesLocations": {
+    ".github/instructions": true,
+    "/Users/mruzekw/.aitk/instructions/": true
   },
-  "totalTypeScript.hiddenTips": [
-    "union-type",
-    "ts-object-type",
-    "literal-type",
-    "type-alias-declaration",
-    "basic-types",
-    "variable-type-annotation",
-    "null-keyword",
-    "typing-function-parameters",
-    "function-return-type",
-    "never-keyword",
-    "optional-object-property",
-    "any-type",
-    "as-const",
-    "interface-declaration",
-    "passing-generics-to-types",
-    "as-const-on-object",
-    "keyof",
-    "typeof",
-    "undefined-keyword",
-    "non-null-expression",
-    "partial-utility-type",
-    "omit-utility-type",
-    "array-type"
-  ],
+
+  "diffEditor.ignoreTrimWhitespace": false,
+
+  "typescript.preferences.organizeImports": {},
+  "typescript.preferences.preferTypeOnlyAutoImports": true,
+  "typescript.tsserver.experimental.enableProjectDiagnostics": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+
+  /**************************
+   * Extensions
+   **************************/
+
   "eslint.rules.customizations": [],
+  "eslint.lintTask.enable": true,
+
+  "prettier.singleQuote": true,
+
+  "tailwindCSS.experimental.classRegex": [
+    ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
+    ["cx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
+  ],
+
+  "markdown-preview-github-styles.colorTheme": "light",
+
+  "cSpell.languageSettings": [],
+  "cSpell.enabledFileTypes": {
+    "*": false
+  },
   "cSpell.userWords": [
     "BASEPATH",
     "contentlayer",
@@ -65,42 +127,78 @@
     "Mruzek",
     "Squarespace"
   ],
-  "totalTypeScript.hideAllTips": true,
+
+  "workspace-terminals.switchTerminal": "fromWorkspaceTerminals",
+
+  "yaml.schemas": {
+    "file:///Users/mruzekw/.vscode/extensions/continue.continue-1.2.4-darwin-arm64/config-yaml-schema.json": [
+      ".continue/**/*.yaml"
+    ]
+  },
+
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "github.copilot.chat.codesearch.enabled": true,
+  "github.copilot.chat.commitMessageGeneration.instructions": [
+    {
+      "text": "Focus on the larger intent of the changes. 'Convert prettier formatting from async to sync' is better than 'Update formatting to use @prettier/sync'. The latter is too literal."
+    },
+    {
+      "text": "Use lots of emojis."
+    }
+  ],
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false,
+    "mdx": false
+  },
+
+  "nix.enableLanguageServer": true,
+  "nix.serverPath": "nil",
+  "nix.serverSettings": {
+    "nil": {
+      "formatting": { "command": ["nixfmt"] }
+    }
+  },
+
+  // https://github.com/mattpocock/ts-error-translator/blob/main/packages/parser/src/tipInfo.ts
+  "totalTypeScript.hiddenTips": [],
   "totalTypeScript.hideBasicTips": true,
+
+  /**************************
+   * Language Specific
+   **************************/
+
+  "[javascript][javascriptreact][typescriptreact][typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[dockercompose]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.autoIndent": "advanced",
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": false,
+      "strings": true
+    },
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "[github-actions-workflow]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "[mdx][markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.wordWrapColumn": 80
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "tailwindCSS.experimental.classRegex": [
-    ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
-    ["cx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
-  ],
-  "[javascriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "editor.fontLigatures": false,
-  "github.copilot.nextEditSuggestions.enabled": true,
-  "github.copilot.chat.codesearch.enabled": true,
-  "security.promptForLocalFileProtocolHandling": false,
-  "cSpell.languageSettings": [],
-  "cSpell.enabledFileTypes": {
-    "*": false
-  },
-  "workspace-terminals.switchTerminal": "fromWorkspaceTerminals",
-  "files.simpleDialog.enable": true,
-  "terminal.integrated.stickyScroll.enabled": true,
-  "scm.defaultViewMode": "tree",
-  "git.autofetch": true,
-  "git.confirmSync": false,
-  "workbench.editor.showTabs": "none",
-  "window.title": "${rootPath}${separator}${activeRepositoryBranchName}${separator}${profileName}",
-  "typescript.preferences.organizeImports": {},
-  "typescript.preferences.preferTypeOnlyAutoImports": true,
-  "window.openFoldersInNewWindow": "on",
-  "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "workbench.activityBar.location": "top"
+  }
 }

@@ -2,39 +2,44 @@
 {{- $githubTagTarURLTmpl := "https://github.com/%s/archive/refs/tags/%s.tar.gz" -}}
 {{- $githubCommitTarURLTmpl := "https://github.com/%s/archive/%s.tar.gz" -}}
 
-[".oh-my-zsh"]
+[".local/share/oh-my-zsh"]
 type = "archive"
 url = {{ printf $githubCommitTarURLTmpl "ohmyzsh/ohmyzsh" "70f0e5285f802ce6eb7feea4588ff8917246233e" | quote }}
 exact = true
 stripComponents = 1
-refreshPeriod = "168h"                                           # refresh weekly
-exclude = ["*/.*", "*/custom/**"]
+exclude = ["*/.*", "*/custom/**", "*/cache/**"]
 
-[".oh-my-zsh/custom/plugins/zsh-autosuggestions"]
-type = "archive"
-url = {{ printf $githubTagTarURLTmpl "zsh-users/zsh-autosuggestions" "v0.7.1" | quote }}
-exact = true
-stripComponents = 1
-refreshPeriod = "168h"
-exclude = ["*/.editorconfig", "*/.gitattributes", "*/.github", "*/.gitignore"]
-
-[".oh-my-zsh/custom/plugins/zsh-syntax-highlighting"]
+[".config/zsh/custom/plugins/zsh-syntax-highlighting"]
 type = "archive"
 url = {{ printf $githubTagTarURLTmpl "zsh-users/zsh-syntax-highlighting" "0.8.0" | quote }}
 exact = true
 stripComponents = 1
-refreshPeriod = "168h"
 
-[".oh-my-zsh/custom/plugins/you-should-use"]
+[".config/zsh/custom/plugins/you-should-use"]
 type = "archive"
 url = {{ printf $githubTagTarURLTmpl "MichaelAquilina/zsh-you-should-use" "1.10.0" | quote }}
 exact = true
 stripComponents = 1
-refreshPeriod = "168h"
 
-[".oh-my-zsh/custom/plugins/fzf-tab"]
+# [".config/zsh/custom/plugins/zsh-abbr"]
+# type = "git-repo"
+# url = "https://github.com/olets/zsh-abbr.git"
+# clone = { args = ["--branch", "v6.4.0", "--depth", "1", "--recurse-submodules"] }
+
+[".config/zsh/custom/plugins/zsh-autosuggestions"]
 type = "archive"
-url = {{ printf $githubCommitTarURLTmpl "Aloxaf/fzf-tab" "fc6f0dcb2d5e41a4a685bfe9af2f2393dc39f689" | quote }}
+url = {{ printf $githubTagTarURLTmpl "zsh-users/zsh-autosuggestions" "v0.7.1" | quote }}
 exact = true
 stripComponents = 1
-refreshPeriod = "168h"
+
+# [".config/zsh/custom/plugins/zsh-autosuggestions-abbreviations-strategy"]
+# type = "archive"
+# url = {{ printf $githubTagTarURLTmpl "olets/zsh-autosuggestions-abbreviations-strategy" "v1.1.2" | quote }}
+# exact = true
+# stripComponents = 1
+
+[".config/zsh/custom/plugins/zsh-autocomplete"]
+type = "archive"
+url = {{ printf $githubCommitTarURLTmpl "marlonrichert/zsh-autocomplete" "bbba73ebdc7c01323e09d4d518e51e2d6847ccc2" | quote }}
+exact = true
+stripComponents = 1

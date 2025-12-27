@@ -2,10 +2,10 @@
 
 set -euo pipefail
 
-# export-vscode-settings.sh - Export VS Code settings from local VS Code User directory into the repo
+# export-vscode-settings.sh - Export VS Code or Cursor settings from local User directory into the repo
 #
 # Usage:
-#   ./export-vscode-settings.sh
+#   ./export-vscode-settings.sh <vscode|cursor>
 #
 # Exports:
 #   - mcp.json
@@ -22,6 +22,18 @@ fi
 # Ensure rsync is available
 if ! command -v rsync >/dev/null 2>&1; then
   echo "Error: rsync not found. Install rsync." >&2
+  exit 1
+fi
+
+# Parse arguments
+TARGET_EDITOR=""
+if [[ $# -gt 0 ]]; then
+  TARGET_EDITOR="$1"
+fi
+
+if [[ "$TARGET_EDITOR" != "vscode" && "$TARGET_EDITOR" != "cursor" ]]; then
+  echo "Error: You must specify the target editor." >&2
+  echo "Usage: $0 <vscode|cursor>" >&2
   exit 1
 fi
 
@@ -45,8 +57,13 @@ if [[ -z "${repo_root}" ]]; then
   exit 1
 fi
 
-dest="$repo_root/home/.vscode"
-src="$HOME/Library/Application Support/Code/User"
+if [[ "$TARGET_EDITOR" == "vscode" ]]; then
+  dest="$repo_root/home/.vscode"
+  src="$HOME/Library/Application Support/Code/User"
+elif [[ "$TARGET_EDITOR" == "cursor" ]]; then
+  dest="$repo_root/home/.cursor"
+  src="$HOME/Library/Application Support/Cursor/User"
+fi
 
 # Skip gracefully if source directory does not exist
 if [[ ! -d "$src" ]]; then

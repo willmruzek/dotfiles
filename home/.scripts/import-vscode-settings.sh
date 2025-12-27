@@ -2,10 +2,10 @@
 
 set -euo pipefail
 
-# import-vscode-settings.sh - Import VS Code settings from repo into the local VS Code User directory
+# import-vscode-settings.sh - Import VS Code or Cursor settings from repo into the local User directory
 #
 # Usage:
-#   ./import-vscode-settings.sh [--dry-run|-n] [--yes|-y]
+#   ./import-vscode-settings.sh <vscode|cursor> [--dry-run|-n] [--yes|-y]
 #
 # Options:
 #   -n, --dry-run  Preview diffs only; no backup or changes
@@ -32,12 +32,21 @@ fi
 # Flags
 AUTO_YES=0
 DRY_RUN=0
+TARGET_EDITOR=""
+
 for arg in "$@"; do
   case "$arg" in
     --yes|-y) AUTO_YES=1 ;;
     --dry-run|-n) DRY_RUN=1 ;;
+    vscode|cursor) TARGET_EDITOR="$arg" ;;
   esac
 done
+
+if [[ -z "$TARGET_EDITOR" ]]; then
+  echo "Error: You must specify the target editor." >&2
+  echo "Usage: $0 <vscode|cursor> [--dry-run|-n] [--yes|-y]" >&2
+  exit 1
+fi
 
 # Centralized include patterns for rsync
 INCLUDES=(
@@ -60,18 +69,23 @@ if [[ -z "${repo_root}" ]]; then
   exit 1
 fi
 
-src="$repo_root/home/.vscode"
-dest="$HOME/Library/Application Support/Code/User"
+if [[ "$TARGET_EDITOR" == "vscode" ]]; then
+  src="$repo_root/home/.vscode"
+  dest="$HOME/Library/Application Support/Code/User"
+elif [[ "$TARGET_EDITOR" == "cursor" ]]; then
+  src="$repo_root/home/.cursor"
+  dest="$HOME/Library/Application Support/Cursor/User"
+fi
 
 # Ensure source directory exists
 if [[ ! -d "$src" ]]; then
-  echo "Error: Source repo VS Code directory not found: $src." >&2
+  echo "Error: Source repo $TARGET_EDITOR directory not found: $src." >&2
   exit 1
 fi
 
-# Ensure VS Code User directory exists
+# Ensure User directory exists
 if [[ ! -d "$dest" ]]; then
-  echo "Error: Destination VS Code User directory not found: $dest." >&2
+  echo "Error: Destination $TARGET_EDITOR User directory not found: $dest." >&2
   exit 1
 fi
 

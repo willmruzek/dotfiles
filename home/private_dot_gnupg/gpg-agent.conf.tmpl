@@ -1,6 +1,20 @@
-# Cache passphrase for 8 hours (28800 seconds)
+# -------------------------------------------------------------------
+# GPG Agent Configuration
+# -------------------------------------------------------------------
+
+# Cache passphrases for up to 8 hours (28800 seconds).
+# This means you won't be prompted for your GPG key's passphrase again
+# during that window, unless you restart the agent.
+
 default-cache-ttl 28800
 max-cache-ttl 28800
 
-# Use pinentry for macOS
-pinentry-program {{ output "brew" "--prefix" }}/bin/pinentry-mac
+# Prevent storing passphrases in any external system keychain
+# (like macOS Keychain or KDE Wallet). Keeps caching internal to gpg-agent.
+
+no-allow-external-cache
+
+# Specify which pinentry program to use for passphrase prompts.
+# On macOS, pinentry-mac provides a native GUI dialog.
+
+pinentry-program {{ lookPath "pinentry-mac" }}

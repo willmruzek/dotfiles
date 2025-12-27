@@ -1,0 +1,13 @@
+command -v brew >/dev/null || export PATH="/opt/homebrew/bin:$HOME/Code/homebrew/bin:$PATH"
+command -v brew >/dev/null && eval "$(brew shellenv)"
+
+{{ if eq .machineType "work" }}
+
+# google-cloud-sdk - Update PATH and enable shell completion
+if [ -f '/Users/wmruzek.cont/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/wmruzek.cont/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '/Users/wmruzek.cont/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/wmruzek.cont/google-cloud-sdk/completion.zsh.inc'; fi
+
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+{{ end }}

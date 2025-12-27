@@ -30,7 +30,7 @@ chezmoi init --apply willmruzek
 ## Structure
 
 - `home/` - Contains all dotfiles (chezmoi source directory)
-- `home/.chezmoiscripts/` - Setup scripts (run_once_* scripts run only on first setup)
+- `home/.chezmoiscripts/` - Setup scripts (run*once*\* scripts run only on first setup)
 - `install.sh` - Bootstrap script for new machines
 
 ## Automatic Setup
@@ -67,20 +67,20 @@ chezmoi update
 
 ## Features
 
-### VS Code settings sync
+### VS Code & Cursor settings sync
 
-Minimal helpers to move VS Code user settings between your Mac and this repo. Requires git and rsync.
+Minimal helpers to move VS Code or Cursor user settings between your Mac and this repo. Requires git and rsync.
 
 - Export local → repo:
 
   ```bash
-  ./home/.scripts/export-vscode-settings.sh
+  ./home/.scripts/export-vscode-settings.sh <vscode|cursor>
   ```
 
 - Import repo → local (preview first by default):
 
   ```bash
-  ./home/.scripts/import-vscode-settings.sh
+  ./home/.scripts/import-vscode-settings.sh <vscode|cursor>
   # flags: -n/--dry-run (preview only), -y/--yes (auto-approve)
   ```
 
@@ -96,8 +96,9 @@ Includes: mcp.json, keybindings.json, settings.json, prompts/ (recursive).
 ### 🛠️ Medium Priority - Development Workflow
 
 1. **Group Related Configs**
-   - `chezmoi add ~/.config/git/`               # Global git hooks and config
-   - `chezmoi add ~/.config/zsh/completions/`   # Custom shell completions
+
+   - `chezmoi add ~/.config/git/` # Global git hooks and config
+   - `chezmoi add ~/.config/zsh/completions/` # Custom shell completions
    - Organize configs under `dot_config/` for better structure
 
 2. **Vim Configuration**

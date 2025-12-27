@@ -1,21 +1,31 @@
 brew "pinentry-mac"
 brew "starship"
 brew "fzf"
-brew "asdf"
 brew "gh"
 brew "tree"
-{{- if eq .machineType "personal" }}
+brew "direnv"
 brew "gpg"
+brew "fd"
+brew "ripgrep"
+brew "bat"
+brew "eza"
+brew "zoxide"
+brew "doggo"
+brew "lazygit"
+brew "fd"
+brew "tlrc"
+
+{{- if eq .machineType "personal" }}
 brew "mas"
 {{- end }}
 
 cask "font-fira-code-nerd-font"
-cask "raycast"
+
 {{- if eq .machineType "personal" }}
+cask "raycast"
 cask "chatgpt"
 cask "1password-cli"
 cask "google-chrome"
-cask "docker"
 cask "docker-desktop"
 cask "rectangle"
 cask "iterm2"

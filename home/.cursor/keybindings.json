@@ -1,0 +1,1581 @@
+[
+  // ─────────────────────────────────────────────────────────────────────────────
+  // cmd+k alt+cmd+c
+  //
+
+  // Remove Cursor bindings
+  {
+    "key": "cmd+r alt+cmd+c",
+    "command": "-workbench.action.addComment",
+    "when": "activeCursorHasCommentingRange"
+  },
+
+  {
+    "key": "cmd+r alt+cmd+c",
+    "command": "-copyFilePath",
+    "when": "editorFocus"
+  },
+
+  // Restore VS Code bindings
+  {
+    "key": "cmd+k alt+cmd+c",
+    "command": "workbench.action.addComment",
+    "when": "activeCursorHasCommentingRange"
+  },
+
+  {
+    "key": "cmd+k alt+cmd+c",
+    "command": "copyFilePath",
+    "when": "editorFocus"
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // cmd+k alt+cmd+down
+  //
+
+  // Remove Cursor bindings
+  {
+    "key": "cmd+r alt+cmd+down",
+    "command": "-editor.action.nextCommentingRange",
+    "when": "accessibilityModeEnabled && commentFocused || accessibilityModeEnabled && editorFocus || accessibilityHelpIsShown && accessibilityModeEnabled && accessibleViewCurrentProviderId == 'comments'"
+  },
+
+  // Restore VS Code bindings
+  {
+    "key": "cmd+k alt+cmd+down",
+    "command": "editor.action.nextCommentingRange",
+    "when": "accessibilityModeEnabled && commentFocused || accessibilityModeEnabled && editorFocus || accessibilityHelpIsShown && accessibilityModeEnabled && accessibleViewCurrentProviderId == 'comments'"
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // cmd+k alt+cmd+left
+  //
+
+  // Remove Cursor bindings
+  {
+    "key": "cmd+r alt+cmd+left",
+    "command": "-workbench.action.previousEditorInGroup"
+  },
+
+  // Restore VS Code bindings
+  {
+    "key": "cmd+k alt+cmd+left",
+    "command": "workbench.action.previousEditorInGroup"
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // cmd+k alt+cmd+right
+  //
+
+  // Remove Cursor bindings
+  {
+    "key": "cmd+r alt+cmd+right",
+    "command": "-workbench.action.nextEditorInGroup"
+  },
+
+  // Restore VS Code bindings
+  {
+    "key": "cmd+k alt+cmd+right",
+    "command": "workbench.action.nextEditorInGroup"
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // cmd+k alt+cmd+up
+  //
+
+  // Remove Cursor bindings
+  {
+    "key": "cmd+r alt+cmd+up",
+    "command": "-editor.action.previousCommentingRange",
+    "when": "accessibilityModeEnabled && commentFocused || accessibilityModeEnabled && editorFocus || accessibilityHelpIsShown && accessibilityModeEnabled && accessibleViewCurrentProviderId == 'comments'"
+  },
+
+  // Restore VS Code bindings
+  {
+    "key": "cmd+k alt+cmd+up",
+    "command": "editor.action.previousCommentingRange",
+    "when": "accessibilityModeEnabled && commentFocused || accessibilityModeEnabled && editorFocus || accessibilityHelpIsShown && accessibilityModeEnabled && accessibleViewCurrentProviderId == 'comments'"
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // cmd+k c
+  //
+
+  // Remove Cursor bindings
+  {
+    "key": "cmd+r c",
+    "command": "-workbench.files.action.compareWithClipboard"
+  },
+
+  // Restore VS Code bindings
+  {
+    "key": "cmd+k c",
+    "command": "workbench.files.action.compareWithClipboard"
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // cmd+k cmd+-
+  //
+
+  // Remove Cursor bindings
+  {
+    "key": "cmd+r cmd+-",
+    "command": "-editor.foldAllExcept",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+
+  // Restore VS Code bindings
+  {
+    "key": "cmd+k cmd+-",
+    "command": "editor.foldAllExcept",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // cmd+k cmd+,
+  //
+
+  // Remove Cursor bindings
+  {
+    "key": "cmd+r cmd+,",
+    "command": "-editor.createFoldingRangeFromSelection",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+
+  // Restore VS Code bindings
+  {
+    "key": "cmd+k cmd+,",
+    "command": "editor.createFoldingRangeFromSelection",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // cmd+k cmd+.
+  //
+
+  // Remove Cursor bindings
+  {
+    "key": "cmd+r cmd+.",
+    "command": "-editor.removeManualFoldingRanges",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+
+  // Restore VS Code bindings
+  {
+    "key": "cmd+k cmd+.",
+    "command": "editor.removeManualFoldingRanges",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // cmd+k cmd+[
+  //
+
+  // Remove Cursor bindings
+  {
+    "key": "cmd+r cmd+[",
+    "command": "-editor.foldRecursively",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+
+  // Restore VS Code bindings
+  {
+    "key": "cmd+k cmd+[",
+    "command": "editor.foldRecursively",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // cmd+k cmd+]
+  //
+
+  // Remove Cursor bindings
+  {
+    "key": "cmd+r cmd+]",
+    "command": "-editor.unfoldRecursively",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+
+  // Restore VS Code bindings
+  {
+    "key": "cmd+k cmd+]",
+    "command": "editor.unfoldRecursively",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // cmd+k cmd+/
+  //
+
+  // Remove Cursor bindings
+  {
+    "key": "cmd+r cmd+/",
+    "command": "-editor.foldAllBlockComments",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+
+  // Restore VS Code bindings
+  {
+    "key": "cmd+k cmd+/",
+    "command": "editor.foldAllBlockComments",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // cmd+k cmd+\
+  //
+
+  // Remove Cursor bindings
+  {
+    "key": "cmd+r cmd+\\",
+    "command": "-workbench.action.splitEditorDown"
+  },
+
+  {
+    "key": "cmd+r cmd+\\",
+    "command": "-workbench.action.splitEditorLeft"
+  },
+
+  {
+    "key": "cmd+r cmd+\\",
+    "command": "-workbench.action.splitEditorOrthogonal"
+  },
+
+  {
+    "key": "cmd+r cmd+\\",
+    "command": "-workbench.action.splitEditorRight"
+  },
+
+  {
+    "key": "cmd+r cmd+\\",
+    "command": "-workbench.action.splitEditorUp"
+  },
+
+  // Restore VS Code bindings
+  {
+    "key": "cmd+k cmd+\\",
+    "command": "workbench.action.splitEditorDown"
+  },
+
+  {
+    "key": "cmd+k cmd+\\",
+    "command": "workbench.action.splitEditorLeft"
+  },
+
+  {
+    "key": "cmd+k cmd+\\",
+    "command": "workbench.action.splitEditorOrthogonal"
+  },
+
+  {
+    "key": "cmd+k cmd+\\",
+    "command": "workbench.action.splitEditorRight"
+  },
+
+  {
+    "key": "cmd+k cmd+\\",
+    "command": "workbench.action.splitEditorUp"
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // cmd+k cmd+=
+  //
+
+  // Remove Cursor bindings
+  {
+    "key": "cmd+r cmd+=",
+    "command": "-editor.unfoldAllExcept",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+
+  // Restore VS Code bindings
+  {
+    "key": "cmd+k cmd+=",
+    "command": "editor.unfoldAllExcept",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // cmd+k cmd+0
+  //
+
+  // Remove Cursor bindings
+  {
+    "key": "cmd+r cmd+0",
+    "command": "-editor.foldAll",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+
+  // Restore VS Code bindings
+  {
+    "key": "cmd+k cmd+0",
+    "command": "editor.foldAll",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // cmd+k cmd+1
+  //
+
+  // Remove Cursor bindings
+  {
+    "key": "cmd+r cmd+1",
+    "command": "-editor.foldLevel1",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+
+  // Restore VS Code bindings
+  {
+    "key": "cmd+k cmd+1",
+    "command": "editor.foldLevel1",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // cmd+k cmd+2
+  //
+
+  // Remove Cursor bindings
+  {
+    "key": "cmd+r cmd+2",
+    "command": "-editor.foldLevel2",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+
+  // Restore VS Code bindings
+  {
+    "key": "cmd+k cmd+2",
+    "command": "editor.foldLevel2",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // cmd+k cmd+3
+  //
+
+  // Remove Cursor bindings
+  {
+    "key": "cmd+r cmd+3",
+    "command": "-editor.foldLevel3",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+
+  // Restore VS Code bindings
+  {
+    "key": "cmd+k cmd+3",
+    "command": "editor.foldLevel3",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // cmd+k cmd+4
+  //
+
+  // Remove Cursor bindings
+  {
+    "key": "cmd+r cmd+4",
+    "command": "-editor.foldLevel4",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+
+  // Restore VS Code bindings
+  {
+    "key": "cmd+k cmd+4",
+    "command": "editor.foldLevel4",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // cmd+k cmd+5
+  //
+
+  // Remove Cursor bindings
+  {
+    "key": "cmd+r cmd+5",
+    "command": "-editor.foldLevel5",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+
+  // Restore VS Code bindings
+  {
+    "key": "cmd+k cmd+5",
+    "command": "editor.foldLevel5",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // cmd+k cmd+6
+  //
+
+  // Remove Cursor bindings
+  {
+    "key": "cmd+r cmd+6",
+    "command": "-editor.foldLevel6",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+
+  // Restore VS Code bindings
+  {
+    "key": "cmd+k cmd+6",
+    "command": "editor.foldLevel6",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // cmd+k cmd+7
+  //
+
+  // Remove Cursor bindings
+  {
+    "key": "cmd+r cmd+7",
+    "command": "-editor.foldLevel7",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+
+  // Restore VS Code bindings
+  {
+    "key": "cmd+k cmd+7",
+    "command": "editor.foldLevel7",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // cmd+k cmd+8
+  //
+
+  // Remove Cursor bindings
+  {
+    "key": "cmd+r cmd+8",
+    "command": "-editor.foldAllMarkerRegions",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+
+  // Restore VS Code bindings
+  {
+    "key": "cmd+k cmd+8",
+    "command": "editor.foldAllMarkerRegions",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // cmd+k cmd+9
+  //
+
+  // Remove Cursor bindings
+  {
+    "key": "cmd+r cmd+9",
+    "command": "-editor.unfoldAllMarkerRegions",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+
+  // Restore VS Code bindings
+  {
+    "key": "cmd+k cmd+9",
+    "command": "editor.unfoldAllMarkerRegions",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // cmd+k cmd+a
+  //
+
+  // Remove Cursor bindings
+  {
+    "key": "cmd+r cmd+a",
+    "command": "-keybindings.editor.addKeybinding",
+    "when": "inKeybindings && keybindingFocus"
+  },
+
+  // Restore VS Code bindings
+  {
+    "key": "cmd+k cmd+a",
+    "command": "keybindings.editor.addKeybinding",
+    "when": "inKeybindings && keybindingFocus"
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // cmd+k cmd+b
+  //
+
+  // Remove Cursor bindings
+  {
+    "key": "cmd+r cmd+b",
+    "command": "-editor.action.setSelectionAnchor",
+    "when": "editorTextFocus"
+  },
+
+  // Restore VS Code bindings
+  {
+    "key": "cmd+k cmd+b",
+    "command": "editor.action.setSelectionAnchor",
+    "when": "editorTextFocus"
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // cmd+k cmd+c
+  //
+
+  // Remove Cursor bindings
+  {
+    "key": "cmd+r cmd+c",
+    "command": "-editor.action.addCommentLine",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+
+  // Restore VS Code bindings
+  {
+    "key": "cmd+k cmd+c",
+    "command": "editor.action.addCommentLine",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // cmd+k cmd+d
+  //
+
+  // Remove Cursor bindings
+  {
+    "key": "cmd+r cmd+d",
+    "command": "-editor.action.moveSelectionToNextFindMatch",
+    "when": "editorFocus"
+  },
+
+  // Restore VS Code bindings
+  {
+    "key": "cmd+k cmd+d",
+    "command": "editor.action.moveSelectionToNextFindMatch",
+    "when": "editorFocus"
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // cmd+k cmd+down
+  //
+
+  // Remove Cursor bindings
+  {
+    "key": "cmd+r cmd+down",
+    "command": "-workbench.action.focusBelowGroup"
+  },
+
+  // Restore VS Code bindings
+  {
+    "key": "cmd+k cmd+down",
+    "command": "workbench.action.focusBelowGroup"
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // cmd+k cmd+e
+  //
+
+  // Remove Cursor bindings
+  {
+    "key": "cmd+r cmd+e",
+    "command": "-keybindings.editor.defineWhenExpression",
+    "when": "inKeybindings && keybindingFocus"
+  },
+
+  // Restore VS Code bindings
+  {
+    "key": "cmd+k cmd+e",
+    "command": "keybindings.editor.defineWhenExpression",
+    "when": "inKeybindings && keybindingFocus"
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // cmd+k cmd+f
+  //
+
+  // Remove Cursor bindings
+  {
+    "key": "cmd+r cmd+f",
+    "command": "-editor.action.formatSelection",
+    "when": "editorHasDocumentSelectionFormattingProvider && editorTextFocus && !editorReadonly"
+  },
+
+  // Restore VS Code bindings
+  {
+    "key": "cmd+k cmd+f",
+    "command": "editor.action.formatSelection",
+    "when": "editorHasDocumentSelectionFormattingProvider && editorTextFocus && !editorReadonly"
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // cmd+k cmd+f12
+  //
+
+  // Remove Cursor bindings
+  {
+    "key": "cmd+r cmd+f12",
+    "command": "-editor.action.revealDefinitionAside",
+    "when": "editorHasDefinitionProvider && editorTextFocus && isWeb && !isInEmbeddedEditor"
+  },
+
+  // Restore VS Code bindings
+  {
+    "key": "cmd+k cmd+f12",
+    "command": "editor.action.revealDefinitionAside",
+    "when": "editorHasDefinitionProvider && editorTextFocus && isWeb && !isInEmbeddedEditor"
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // cmd+k cmd+i
+  //
+
+  // Remove Cursor bindings
+  {
+    "key": "cmd+r cmd+i",
+    "command": "-editor.action.showHover",
+    "when": "editorTextFocus"
+  },
+
+  {
+    "key": "cmd+r cmd+i",
+    "command": "-editor.debug.action.showDebugHover",
+    "when": "editorTextFocus && inDebugMode"
+  },
+
+  {
+    "key": "cmd+r cmd+i",
+    "command": "-list.showHover",
+    "when": "listFocus && !inputFocus && !treestickyScrollFocused"
+  },
+
+  {
+    "key": "cmd+r cmd+i",
+    "command": "-workbench.action.terminal.focusHover",
+    "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalIsOpen || terminalFocus && terminalProcessSupported || terminalHasBeenCreated && terminalTabsFocus || terminalIsOpen && terminalTabsFocus || terminalProcessSupported && terminalTabsFocus"
+  },
+
+  // Restore VS Code bindings
+  {
+    "key": "cmd+k cmd+i",
+    "command": "editor.action.showHover",
+    "when": "editorTextFocus"
+  },
+
+  {
+    "key": "cmd+k cmd+i",
+    "command": "editor.debug.action.showDebugHover",
+    "when": "editorTextFocus && inDebugMode"
+  },
+
+  {
+    "key": "cmd+k cmd+i",
+    "command": "list.showHover",
+    "when": "listFocus && !inputFocus && !treestickyScrollFocused"
+  },
+
+  {
+    "key": "cmd+k cmd+i",
+    "command": "workbench.action.terminal.focusHover",
+    "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalIsOpen || terminalFocus && terminalProcessSupported || terminalHasBeenCreated && terminalTabsFocus || terminalIsOpen && terminalTabsFocus || terminalProcessSupported && terminalTabsFocus"
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // cmd+k cmd+j
+  //
+
+  // Remove Cursor bindings
+  {
+    "key": "cmd+r cmd+j",
+    "command": "-editor.unfoldAll",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+
+  // Restore VS Code bindings
+  {
+    "key": "cmd+k cmd+j",
+    "command": "editor.unfoldAll",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // cmd+k cmd+k
+  //
+
+  // Remove Cursor bindings
+  {
+    "key": "cmd+r cmd+k",
+    "command": "-editor.action.selectFromAnchorToCursor",
+    "when": "editorTextFocus && selectionAnchorSet"
+  },
+
+  // Restore VS Code bindings
+  {
+    "key": "cmd+k cmd+k",
+    "command": "editor.action.selectFromAnchorToCursor",
+    "when": "editorTextFocus && selectionAnchorSet"
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // cmd+k cmd+l
+  //
+
+  // Remove Cursor bindings
+  {
+    "key": "cmd+r cmd+l",
+    "command": "-editor.toggleFold",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+
+  // Restore VS Code bindings
+  {
+    "key": "cmd+k cmd+l",
+    "command": "editor.toggleFold",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // cmd+k cmd+left
+  //
+
+  // Remove Cursor bindings
+  {
+    "key": "cmd+r cmd+left",
+    "command": "-workbench.action.focusLeftGroup"
+  },
+
+  // Restore VS Code bindings
+  {
+    "key": "cmd+k cmd+left",
+    "command": "workbench.action.focusLeftGroup"
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // cmd+k cmd+m
+  //
+
+  // Remove Cursor bindings
+  {
+    "key": "cmd+r cmd+m",
+    "command": "-workbench.action.toggleMaximizeEditorGroup",
+    "when": "editorPartMaximizedEditorGroup || editorPartMultipleEditorGroups"
+  },
+
+  // Restore VS Code bindings
+  {
+    "key": "cmd+k cmd+m",
+    "command": "workbench.action.toggleMaximizeEditorGroup",
+    "when": "editorPartMaximizedEditorGroup || editorPartMultipleEditorGroups"
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // cmd+k cmd+q
+  //
+
+  // Remove Cursor bindings
+  {
+    "key": "cmd+r cmd+q",
+    "command": "-workbench.action.navigateToLastEditLocation"
+  },
+
+  // Restore VS Code bindings
+  {
+    "key": "cmd+k cmd+q",
+    "command": "workbench.action.navigateToLastEditLocation"
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // cmd+k cmd+right
+  //
+
+  // Remove Cursor bindings
+  {
+    "key": "cmd+r cmd+right",
+    "command": "-workbench.action.focusRightGroup"
+  },
+
+  // Restore VS Code bindings
+  {
+    "key": "cmd+k cmd+right",
+    "command": "workbench.action.focusRightGroup"
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // cmd+k cmd+s
+  //
+
+  // Remove Cursor bindings
+  {
+    "key": "cmd+r cmd+s",
+    "command": "-workbench.action.openGlobalKeybindings"
+  },
+
+  // Restore VS Code bindings
+  {
+    "key": "cmd+k cmd+s",
+    "command": "workbench.action.openGlobalKeybindings"
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // cmd+k cmd+t
+  //
+
+  // Remove Cursor bindings
+  {
+    "key": "cmd+r cmd+t",
+    "command": "-workbench.action.selectTheme"
+  },
+
+  // Restore VS Code bindings
+  {
+    "key": "cmd+k cmd+t",
+    "command": "workbench.action.selectTheme"
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // cmd+k cmd+u
+  //
+
+  // Remove Cursor bindings
+  {
+    "key": "cmd+r cmd+u",
+    "command": "-editor.action.removeCommentLine",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+
+  // Restore VS Code bindings
+  {
+    "key": "cmd+k cmd+u",
+    "command": "editor.action.removeCommentLine",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // cmd+k cmd+up
+  //
+
+  // Remove Cursor bindings
+  {
+    "key": "cmd+r cmd+up",
+    "command": "-workbench.action.focusAboveGroup"
+  },
+
+  // Restore VS Code bindings
+  {
+    "key": "cmd+k cmd+up",
+    "command": "workbench.action.focusAboveGroup"
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // cmd+k cmd+w
+  //
+
+  // Remove Cursor bindings
+  {
+    "key": "cmd+r cmd+w",
+    "command": "-workbench.action.closeAllEditors"
+  },
+
+  // Restore VS Code bindings
+  {
+    "key": "cmd+k cmd+w",
+    "command": "workbench.action.closeAllEditors"
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // cmd+k cmd+x
+  //
+
+  // Remove Cursor bindings
+  {
+    "key": "cmd+r cmd+x",
+    "command": "-editor.action.trimTrailingWhitespace",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+
+  // Restore VS Code bindings
+  {
+    "key": "cmd+k cmd+x",
+    "command": "editor.action.trimTrailingWhitespace",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // cmd+k d
+  //
+
+  // Remove Cursor bindings
+  {
+    "key": "cmd+r d",
+    "command": "-workbench.files.action.compareWithSaved"
+  },
+
+  // Restore VS Code bindings
+  {
+    "key": "cmd+k d",
+    "command": "workbench.files.action.compareWithSaved"
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // cmd+k down
+  //
+
+  // Remove Cursor bindings
+  {
+    "key": "cmd+r down",
+    "command": "-workbench.action.moveActiveEditorGroupDown"
+  },
+
+  {
+    "key": "cmd+r down",
+    "command": "-views.moveViewDown",
+    "when": "focusedView != ''"
+  },
+
+  // Restore VS Code bindings
+  {
+    "key": "cmd+k down",
+    "command": "workbench.action.moveActiveEditorGroupDown"
+  },
+
+  {
+    "key": "cmd+k down",
+    "command": "views.moveViewDown",
+    "when": "focusedView != ''"
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // cmd+k e
+  //
+
+  // Remove Cursor bindings
+  {
+    "key": "cmd+r e",
+    "command": "-workbench.files.action.focusOpenEditorsView",
+    "when": "workbench.explorer.openEditorsView.active"
+  },
+
+  // Restore VS Code bindings
+  {
+    "key": "cmd+k e",
+    "command": "workbench.files.action.focusOpenEditorsView",
+    "when": "workbench.explorer.openEditorsView.active"
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // cmd+k enter
+  //
+
+  // Remove Cursor bindings
+  {
+    "key": "cmd+r enter",
+    "command": "-workbench.action.keepEditor"
+  },
+
+  // Restore VS Code bindings
+  {
+    "key": "cmd+k enter",
+    "command": "workbench.action.keepEditor"
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // cmd+k f
+  //
+
+  // Remove Cursor bindings
+  {
+    "key": "cmd+r f",
+    "command": "-workbench.action.closeFolder",
+    "when": "emptyWorkspaceSupport && workbenchState != 'empty'"
+  },
+
+  // Restore VS Code bindings
+  {
+    "key": "cmd+k f",
+    "command": "workbench.action.closeFolder",
+    "when": "emptyWorkspaceSupport && workbenchState != 'empty'"
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // cmd+k f12
+  //
+
+  // Remove Cursor bindings
+  {
+    "key": "cmd+r f12",
+    "command": "-editor.action.revealDefinitionAside",
+    "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+  },
+
+  // Restore VS Code bindings
+  {
+    "key": "cmd+k f12",
+    "command": "editor.action.revealDefinitionAside",
+    "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // cmd+k f2
+  //
+
+  // Remove Cursor bindings
+  {
+    "key": "cmd+r f2",
+    "command": "-togglePeekWidgetFocus",
+    "when": "inReferenceSearchEditor || referenceSearchVisible"
+  },
+
+  // Restore VS Code bindings
+  {
+    "key": "cmd+k f2",
+    "command": "togglePeekWidgetFocus",
+    "when": "inReferenceSearchEditor || referenceSearchVisible"
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // cmd+k left
+  //
+
+  // Remove Cursor bindings
+  {
+    "key": "cmd+r left",
+    "command": "-workbench.action.moveActiveEditorGroupLeft"
+  },
+
+  {
+    "key": "cmd+r left",
+    "command": "-views.moveViewLeft",
+    "when": "focusedView != ''"
+  },
+
+  // Restore VS Code bindings
+  {
+    "key": "cmd+k left",
+    "command": "workbench.action.moveActiveEditorGroupLeft"
+  },
+
+  {
+    "key": "cmd+k left",
+    "command": "views.moveViewLeft",
+    "when": "focusedView != ''"
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // cmd+k m
+  //
+
+  // Remove Cursor bindings
+  {
+    "key": "cmd+r m",
+    "command": "-workbench.action.editor.changeLanguageMode",
+    "when": "!notebookEditorFocused"
+  },
+
+  // Restore VS Code bindings
+  {
+    "key": "cmd+k m",
+    "command": "workbench.action.editor.changeLanguageMode",
+    "when": "!notebookEditorFocused"
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // cmd+k o
+  //
+
+  // Remove Cursor bindings
+  {
+    "key": "cmd+r o",
+    "command": "-workbench.action.copyEditorToNewWindow",
+    "when": "activeEditor"
+  },
+
+  // Restore VS Code bindings
+  {
+    "key": "cmd+k o",
+    "command": "workbench.action.copyEditorToNewWindow",
+    "when": "activeEditor"
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // cmd+k p
+  //
+
+  // Remove Cursor bindings
+  {
+    "key": "cmd+r p",
+    "command": "-workbench.action.files.copyPathOfActiveFile"
+  },
+
+  // Restore VS Code bindings
+  {
+    "key": "cmd+k p",
+    "command": "workbench.action.files.copyPathOfActiveFile"
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // cmd+k r
+  //
+
+  // Remove Cursor bindings
+  {
+    "key": "cmd+r r",
+    "command": "-workbench.action.files.revealActiveFileInWindows"
+  },
+
+  // Restore VS Code bindings
+  {
+    "key": "cmd+k r",
+    "command": "workbench.action.files.revealActiveFileInWindows"
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // cmd+k right
+  //
+
+  // Remove Cursor bindings
+  {
+    "key": "cmd+r right",
+    "command": "-workbench.action.moveActiveEditorGroupRight"
+  },
+
+  {
+    "key": "cmd+r right",
+    "command": "-views.moveViewRight",
+    "when": "focusedView != ''"
+  },
+
+  // Restore VS Code bindings
+  {
+    "key": "cmd+k right",
+    "command": "workbench.action.moveActiveEditorGroupRight"
+  },
+
+  {
+    "key": "cmd+k right",
+    "command": "views.moveViewRight",
+    "when": "focusedView != ''"
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // cmd+k s
+  //
+
+  // Remove Cursor bindings
+  {
+    "key": "cmd+r s",
+    "command": "-workbench.action.files.saveWithoutFormatting"
+  },
+
+  // Restore VS Code bindings
+  {
+    "key": "cmd+k s",
+    "command": "workbench.action.files.saveWithoutFormatting"
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // cmd+k shift+alt+cmd+c
+  //
+
+  // Remove Cursor bindings
+  {
+    "key": "cmd+r shift+alt+cmd+c",
+    "command": "-copyRelativeFilePath",
+    "when": "editorFocus"
+  },
+
+  // Restore VS Code bindings
+  {
+    "key": "cmd+k shift+alt+cmd+c",
+    "command": "copyRelativeFilePath",
+    "when": "editorFocus"
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // cmd+k shift+cmd+\
+  //
+
+  // Remove Cursor bindings
+  {
+    "key": "cmd+r shift+cmd+\\",
+    "command": "-workbench.action.joinEditorInGroup",
+    "when": "sideBySideEditorActive"
+  },
+
+  {
+    "key": "cmd+r shift+cmd+\\",
+    "command": "-workbench.action.splitEditorInGroup",
+    "when": "activeEditorCanSplitInGroup"
+  },
+
+  // Restore VS Code bindings
+  {
+    "key": "cmd+k shift+cmd+\\",
+    "command": "workbench.action.joinEditorInGroup",
+    "when": "sideBySideEditorActive"
+  },
+
+  {
+    "key": "cmd+k shift+cmd+\\",
+    "command": "workbench.action.splitEditorInGroup",
+    "when": "activeEditorCanSplitInGroup"
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // cmd+k shift+cmd+l
+  //
+
+  // Remove Cursor bindings
+  {
+    "key": "cmd+r shift+cmd+l",
+    "command": "-editor.toggleFoldRecursively",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+
+  // Restore VS Code bindings
+  {
+    "key": "cmd+k shift+cmd+l",
+    "command": "editor.toggleFoldRecursively",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // cmd+k shift+cmd+left
+  //
+
+  // Remove Cursor bindings
+  {
+    "key": "cmd+r shift+cmd+left",
+    "command": "-workbench.action.moveEditorLeftInGroup"
+  },
+
+  // Restore VS Code bindings
+  {
+    "key": "cmd+k shift+cmd+left",
+    "command": "workbench.action.moveEditorLeftInGroup"
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // cmd+k shift+cmd+n
+  //
+
+  // Remove Cursor bindings
+  {
+    "key": "cmd+r shift+cmd+n",
+    "command": "-notifications.showList"
+  },
+
+  // Restore VS Code bindings
+  {
+    "key": "cmd+k shift+cmd+n",
+    "command": "notifications.showList"
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // cmd+k shift+cmd+right
+  //
+
+  // Remove Cursor bindings
+  {
+    "key": "cmd+r shift+cmd+right",
+    "command": "-workbench.action.moveEditorRightInGroup"
+  },
+
+  // Restore VS Code bindings
+  {
+    "key": "cmd+k shift+cmd+right",
+    "command": "workbench.action.moveEditorRightInGroup"
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // cmd+k shift+cmd+w
+  //
+
+  // Remove Cursor bindings
+  {
+    "key": "cmd+r shift+cmd+w",
+    "command": "-workbench.action.closeAllGroups"
+  },
+
+  // Restore VS Code bindings
+  {
+    "key": "cmd+k shift+cmd+w",
+    "command": "workbench.action.closeAllGroups"
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // cmd+k shift+enter
+  //
+
+  // Remove Cursor bindings
+  {
+    "key": "cmd+r shift+enter",
+    "command": "-workbench.action.pinEditor",
+    "when": "!activeEditorIsPinned"
+  },
+
+  {
+    "key": "cmd+r shift+enter",
+    "command": "-workbench.action.unpinEditor",
+    "when": "activeEditorIsPinned"
+  },
+
+  // Restore VS Code bindings
+  {
+    "key": "cmd+k shift+enter",
+    "command": "workbench.action.pinEditor",
+    "when": "!activeEditorIsPinned"
+  },
+
+  {
+    "key": "cmd+k shift+enter",
+    "command": "workbench.action.unpinEditor",
+    "when": "activeEditorIsPinned"
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // cmd+k shift+o
+  //
+
+  // Remove Cursor bindings
+  {
+    "key": "cmd+r shift+o",
+    "command": "-workbench.action.compareEditor.openSide",
+    "when": "inDiffEditor"
+  },
+
+  // Restore VS Code bindings
+  {
+    "key": "cmd+k shift+o",
+    "command": "workbench.action.compareEditor.openSide",
+    "when": "inDiffEditor"
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // cmd+k u
+  //
+
+  // Remove Cursor bindings
+  {
+    "key": "cmd+r u",
+    "command": "-workbench.action.closeUnmodifiedEditors"
+  },
+
+  // Restore VS Code bindings
+  {
+    "key": "cmd+k u",
+    "command": "workbench.action.closeUnmodifiedEditors"
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // cmd+k up
+  //
+
+  // Remove Cursor bindings
+  {
+    "key": "cmd+r up",
+    "command": "-workbench.action.moveActiveEditorGroupUp"
+  },
+
+  {
+    "key": "cmd+r up",
+    "command": "-views.moveViewUp",
+    "when": "focusedView != ''"
+  },
+
+  // Restore VS Code bindings
+  {
+    "key": "cmd+k up",
+    "command": "workbench.action.moveActiveEditorGroupUp"
+  },
+
+  {
+    "key": "cmd+k up",
+    "command": "views.moveViewUp",
+    "when": "focusedView != ''"
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // cmd+k w
+  //
+
+  // Remove Cursor bindings
+  {
+    "key": "cmd+r w",
+    "command": "-workbench.action.closeEditorsInGroup"
+  },
+
+  // Restore VS Code bindings
+  {
+    "key": "cmd+k w",
+    "command": "workbench.action.closeEditorsInGroup"
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // cmd+k z
+  //
+
+  // Remove Cursor bindings
+  {
+    "key": "cmd+r z",
+    "command": "-workbench.action.toggleZenMode",
+    "when": "!isAuxiliaryWindowFocusedContext"
+  },
+
+  // Restore VS Code bindings
+  {
+    "key": "cmd+k z",
+    "command": "workbench.action.toggleZenMode",
+    "when": "!isAuxiliaryWindowFocusedContext"
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // cmd+l
+  //
+
+  // // Remove Cursor bindings
+  // {
+  //   "key": "cmd+p",
+  //   "command": "-expandLineSelection",
+  //   "when": "textInputFocus"
+  // },
+
+  // // Restore VS Code bindings
+  // {
+  //   "key": "cmd+l",
+  //   "command": "expandLineSelection",
+  //   "when": "textInputFocus"
+  // },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // cmd+r
+  //
+
+  // Remove Cursor bindings
+  {
+    "key": "shift+cmd+r",
+    "command": "-workbench.action.reloadWindow",
+    "when": "isDevelopment"
+  },
+
+  // Restore VS Code bindings
+  {
+    "key": "cmd+r",
+    "command": "workbench.action.reloadWindow",
+    "when": "isDevelopment"
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // shift+cmd+y
+  //
+
+  // Remove Cursor bindings
+  {
+    "key": "shift+alt+cmd+y",
+    "command": "-workbench.debug.action.toggleRepl",
+    "when": "workbench.panel.repl.view.active"
+  },
+
+  // Restore VS Code bindings
+  {
+    "key": "shift+cmd+y",
+    "command": "workbench.debug.action.toggleRepl",
+    "when": "workbench.panel.repl.view.active"
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // cmd+k
+  //
+
+  // Remove Cursor bindings
+  {
+    "key": "cmd+k",
+    "command": "-workbench.action.terminal.clear",
+    "when": "terminalFocus && terminalHasBeenCreated && !accessibilityModeEnabled || terminalFocus && terminalProcessSupported && !accessibilityModeEnabled || accessibilityModeEnabled && accessibleViewIsShown && terminalHasBeenCreated && accessibleViewCurrentProviderId == 'terminal' || accessibilityModeEnabled && accessibleViewIsShown && terminalProcessSupported && accessibleViewCurrentProviderId == 'terminal'"
+  },
+  {
+    "key": "cmd+k",
+    "command": "-workbench.debug.panel.action.clearReplAction",
+    "when": "focusedView == 'workbench.panel.repl.view'"
+  },
+  {
+    "key": "cmd+k",
+    "command": "-aipopup.action.modal.generate",
+    "when": "editorFocus && !composerBarIsVisible",
+    "args": {
+      "invocationType": "new"
+    }
+  },
+  {
+    "key": "cmd+k",
+    "command": "-editor.action.inlineDiffs.focusEditor",
+    "when": "editorHasPromptBar && editorPromptBarFocused"
+  },
+  {
+    "key": "cmd+k",
+    "command": "-cursorai.action.generateInTerminal",
+    "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported || terminalHasBeenCreated && terminalPromptBarVisible || terminalProcessSupported && terminalPromptBarVisible"
+  },
+
+  // Restore VS Code bindings
+  {
+    "key": "cmd+k",
+    "command": "workbench.action.terminal.clear",
+    "when": "terminalFocus && terminalHasBeenCreated && !accessibilityModeEnabled || terminalFocus && terminalProcessSupported && !accessibilityModeEnabled || accessibilityModeEnabled && accessibleViewIsShown && terminalHasBeenCreated && accessibleViewCurrentProviderId == 'terminal' || accessibilityModeEnabled && accessibleViewIsShown && terminalProcessSupported && accessibleViewCurrentProviderId == 'terminal'"
+  },
+  {
+    "key": "cmd+k",
+    "command": "workbench.debug.panel.action.clearReplAction",
+    "when": "focusedView == 'workbench.panel.repl.view'"
+  },
+  {
+    "key": "alt+;",
+    "command": "aipopup.action.modal.generate",
+    "when": "editorFocus && !composerBarIsVisible",
+    "args": {
+      "invocationType": "new"
+    }
+  },
+  {
+    "key": "alt+;",
+    "command": "editor.action.inlineDiffs.focusEditor",
+    "when": "editorHasPromptBar && editorPromptBarFocused"
+  },
+  {
+    "key": "alt+;",
+    "command": "cursorai.action.generateInTerminal",
+    "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported || terminalHasBeenCreated && terminalPromptBarVisible || terminalProcessSupported && terminalPromptBarVisible"
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+
+  {
+    "key": "ctrl+alt+right",
+    "command": "-cursorWordEndRight",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+alt+right",
+    "command": "-cursorWordPartRight",
+    "when": "textInputFocus"
+  },
+
+  // Enter next line in terminal without executing
+  {
+    "key": "ctrl+enter",
+    "command": "workbench.action.terminal.sendSequence",
+    "args": {
+      "text": "\\\r\n"
+    },
+    "when": "terminalFocus"
+  },
+  {
+    "key": "shift+enter",
+    "command": "workbench.action.terminal.sendSequence",
+    "args": {
+      "text": "\\\r\n"
+    },
+    "when": "terminalFocus"
+  },
+
+  // Quick switch windows
+  {
+    "key": "alt+p",
+    "command": "workbench.action.quickSwitchWindow"
+  },
+  {
+    "key": "alt+p",
+    "command": "workbench.action.quickOpenNavigateNext",
+    "when": "inWindowsPicker"
+  }
+]

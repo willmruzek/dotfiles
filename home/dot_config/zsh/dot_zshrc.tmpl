@@ -1,75 +1,107 @@
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export ZSH="$HOME/.local/share/oh-my-zsh"
+ZSH_CUSTOM="$ZDOTDIR/custom"
 
-# Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
-
-# Using starship.rs prompt via plugin
-# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-# ZSH_THEME="robbyrussell"
-
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
+ZSH_DISABLE_COMPFIX=true
 
 plugins=(
-    git
+    zsh-syntax-highlighting
     vi-mode
+    direnv
+    git
+    fzf
     starship
-    zsh-autosuggestions
     you-should-use
     chezmoi
     gh
     npm
-    fzf
-    fzf-tab
-    zsh-syntax-highlighting
-    asdf
-    encourage-asdf-tools
+    forgit
+    zsh-autocomplete
+    # zsh-abbr
+    zsh-autosuggestions
+    # zsh-autosuggestions-abbreviations-strategy
 )
 
+BREW_BASE={{ output "brew" "--prefix" | trim }}
+BREW_OPT="$BREW_BASE/opt"
+BREW_LIB="$BREW_BASE/lib"
+
 # Point fzf plugin to fzf install location
-export FZF_BASE="$(brew --prefix fzf)"
+export FZF_BASE="$BREW_OPT/fzf"
 
-# Ensure Homebrew completions are included.
-# See: https://docs.brew.sh/Shell-Completion
-FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+fpath=($BREW_BASE/share/zsh-completions $fpath)
 
+# ==============================================================================
 # Load Oh My Zsh
+# ==============================================================================
 source $ZSH/oh-my-zsh.sh
+# ==============================================================================
 
-# Enable bash completion in zsh
-autoload -U +X bashcompinit && bashcompinit
+# ZSH_AUTOSUGGEST_STRATEGY=(abbreviations $ZSH_AUTOSUGGEST_STRATEGY)
 
-# Set Homebrew bundle file location
-export HOMEBREW_BUNDLE_FILE=~/.Brewfile
+ABBR_QUIET=1
+ABBR_AUTOLOAD=0
+ABBR_SET_EXPANSION_CURSOR=1
+ABBR_SET_LINE_CURSOR=1
+ABBR_GET_AVAILABLE_ABBREVIATION=1
+ABBR_LOG_AVAILABLE_ABBREVIATION=1
+ABBR_LOG_AVAILABLE_ABBREVIATION_AFTER=1
 
-# Disable Oh My Zsh auto-updates since chezmoi manages it
-export DISABLE_AUTO_UPDATE=true
+# Make Tab and ShiftTab go to the menu
+bindkey              '^I' menu-select
+bindkey "$terminfo[kcbt]" menu-select
 
-# Change cursor based on vi mode
-export VI_MODE_SET_CURSOR=true
+# Make ← and → always move the cursor on the command line
+bindkey -M menuselect  '^[[D' .backward-char  '^[OD' .backward-char
+bindkey -M menuselect  '^[[C'  .forward-char  '^[OC'  .forward-char
 
-# Set position of zsh-you-should-use hints
-export YSU_MESSAGE_POSITION="after"
+# Option + Right Arrow -> Forward Word
+bindkey "^[[1;3C" forward-word
+bindkey "^[f" forward-word
 
-# Show hidden files in file completions
-setopt globdots
+# Option + Left Arrow -> Backward Word
+bindkey "^[[1;3D" backward-word
+bindkey "^[b" backward-word
 
 ###########
 # Aliases #
 ###########
 
 alias cz="chezmoi"
+alias czd="chezmoi diff"
+alias cza="chezmoi apply"
+(( $+commands[bat] )) && alias cat="bat"
+(( $+commands[eza] )) && alias ls="eza"
 
-{{ if eq .machineType "work" }}
-# Misc
+# Load abbreviations
+# for abbr_file in $ZDOTDIR/abbreviations/*.zsh; do
+#   source "$abbr_file"
+# done
 
-# nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# abbr import-aliases
 
-# google-cloud-sdk - Update PATH and enable shell completion
-if [ -f '/Users/wmruzek.cont/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/wmruzek.cont/google-cloud-sdk/path.zsh.inc'; fi
-if [ -f '/Users/wmruzek.cont/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/wmruzek.cont/google-cloud-sdk/completion.zsh.inc'; fi
-{{ end }}
+# Trigger fzf history search with up arrow
+bindkey '^[[A' fzf-history-widget
+bindkey '^[OA' fzf-history-widget
+
+bindkey -M viins '^[[A' fzf-history-widget
+bindkey -M vicmd '^[[A' fzf-history-widget
+
+bindkey -M viins '^[OA' fzf-history-widget
+bindkey -M vicmd '^[OA' fzf-history-widget
+
+# Enable bash completion in zsh
+autoload -U +X bashcompinit && bashcompinit
+
+# Disable Oh My Zsh auto-updates since chezmoi manages it
+DISABLE_AUTO_UPDATE=true
+
+# Change cursor based on vi mode
+VI_MODE_SET_CURSOR=true
+
+# Set position of zsh-you-should-use hints
+YSU_MESSAGE_POSITION="after"
+
+# Show hidden files in file completions
+setopt globdots
+
+test -e "${ZDOTDIR}/.iterm2_shell_integration.zsh" && source "${ZDOTDIR}/.iterm2_shell_integration.zsh"
